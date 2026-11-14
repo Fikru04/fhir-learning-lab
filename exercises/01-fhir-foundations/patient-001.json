@@ -1,0 +1,21 @@
+
+{
+  "resourceType": "Patient",
+  "id": "patient-001",
+  "identifier": [
+    {
+      "system": "https://example.org/mrn",
+      "value": "SYN-1001"
+    }
+  ],
+  "active": true,
+  "name": [
+    {
+      "use": "official",
+      "family": "Smith",
+      "given": ["Jordan"]
+    }
+  ],
+  "gender": "unknown",
+  "birthDate": "1985-06-15"
+}
