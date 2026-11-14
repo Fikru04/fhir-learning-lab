@@ -32,3 +32,18 @@ Not yet completed.
 **Lessons learned:** FHIR search returns a Bundle, while a read returns an individual resource. The logical `id` differs from a business `identifier`. Validation feedback can identify problems that should be corrected and retested.
 
 **Note:** All data are fictional. This exercise does not establish conformance to every implementation guide.
+### FHIR Create and Read Exercise
+
+**Test environment:** HAPI FHIR R4 public server
+
+**Create:** Submitted a fictional Patient resource using `POST /Patient`, without specifying a logical ID.
+
+**Create result:** `HTTP 201 Created`. The server assigned Patient ID `737787` and resource version `1`.
+
+**Read:** Retrieved the same resource using `GET /Patient/737787`.
+
+**Read result:** `HTTP 200 OK`. Confirmed that the response contained the fictional patient's information, including business identifier `SYN-1001` and the human-readable narrative.
+
+**Lessons learned:** A FHIR server can assign the logical `id` during creation. The server-assigned `id` differs from the Patient's business `identifier`. A successful read retrieves the stored resource by its logical ID.
+
+**Note:** HAPI is a public demonstration server and may periodically remove test records. All patient details in this exercise are fictional.
