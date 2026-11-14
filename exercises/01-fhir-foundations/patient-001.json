@@ -2,6 +2,10 @@
 {
   "resourceType": "Patient",
   "id": "patient-001",
+  "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic patient Jordan Smith — educational test data only.</div>"
+},
   "identifier": [
     {
       "system": "https://example.org/mrn",
